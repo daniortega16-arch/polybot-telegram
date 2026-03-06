@@ -1,6 +1,6 @@
-
 [build]
-builder = "NIXPACKS"
+  builder = "NIXPACKS"
 
 [deploy]
-startCommand = "python main.py"
+  startCommand = "cd /app && 
+  python main.py"
