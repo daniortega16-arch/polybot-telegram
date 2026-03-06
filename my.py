@@ -4,7 +4,7 @@ import requests
 import os
 
 # TOKEN DIRECTO (cambia por tuyo)
-TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "TU_TOKEN_AQUI")  # fallback
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "8000550010:AAHJrXGZZSGZNdT2OOq8bTYFxqr1rB2zqD8")  # fallback
 if not TOKEN:
     print("ERROR: TOKEN vacío!")
     exit(1)
