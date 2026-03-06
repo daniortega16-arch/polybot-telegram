@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import requests
 
 load_dotenv()
-TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
+TOKEN = os.getenv('8000550010:AAHJrXGZZSGZNdT2OOq8bTYFxqr1rB2zqD8')
 bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=['start', 'hello'])
