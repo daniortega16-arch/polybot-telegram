@@ -18,10 +18,13 @@ def start(message):
 
 @bot.message_handler(commands=['poly'])
 def poly(message):
-    try:
-session = requests.Session()
-session.headers.update({'User-Agent': 'Mozilla/5.0'})
-r = session.get('https://gamma-api.polymarket.com/markets?active=true&limit=10&sort=volume', timeout=30)
+try:
+    session = requests.Session()
+    session.headers.update({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'})
+    r = session.get('https://gamma-api.polymarket.com/markets?active=true&limit=10&sort=volume', timeout=30)
+except Exception as e:
+    logger.error(f"PolyMarkets error: {e}")
+    markets = []
         data = r.json()
         msg = "🏆 TOP POLYMARKET VALUE BETS:\n"
         for m in data[:3]:
